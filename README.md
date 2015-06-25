@@ -18,6 +18,8 @@ HTML5におけるsection, article, nav要素のようにアウトラインを形
 * footer, foot
 * navigation, nav, menu
 * home, top
+* single（個別記事、シングルページ）
+* post
 
 ### セクションに関連する要素
 * heading, headline, title
@@ -29,7 +31,7 @@ HTML5におけるsection, article, nav要素のようにアウトラインを形
 CSSでレイアウトを指定する際に使用する。
 
 ### ブロック
-* wrapper, container, outer, area（要素のかたまりを物理的にまとめるために使用される）
+* wrapper, wrap, container, outer, area（要素のかたまりを物理的にまとめるために使用される）
 * inner, body, box, unit, holder, frame（wrapperやcontainerなどに入れ子にして配置するコンテナブロック）
 * list, items（ul要素やol要素のような箇条書きや一覧）
 * group, collection（同じ分類の要素をまとめる）
@@ -40,16 +42,24 @@ CSSでレイアウトを指定する際に使用する。
 * card（画像と文章が縦並びになったもの）
 * tile, panel（複数の同じ形状のブロックを並べたもの）
 * form
+* video, player（動画）
+* mask（透過したカラー）
+
 
 ### エレメント
 * item, cell（ブロックに内包される汎用的な名前）
 * link
+* tagline（スローガン、キャッチコピー）
+* catch（キャッチコピー）
 * text, message, sentence（文章）
 * caption（図表を補足する）
 * summary（概要、要約）
 * note（注釈、注意）
-* description(概要、説明、解説)
+* description, desc(概要、説明、解説)
 * lead（見出しの補足や記事の要約）
+* announce（告知、お知らせ）
+* meta（メタ情報）
+* target
 
 ### モディファイア
 エレメントやコンポーネントのバージョン違い。恒久的で状態が変化しない。
@@ -68,6 +78,7 @@ CSSでレイアウトを指定する際に使用する。
 * author
 * guest, user
 * previous, next
+* sp, tb, pc（スマホ、タブレット、パソコン）
 
 ### ステート
 モディファイアと違いユーザーの操作などで状態が変化する。
@@ -78,7 +89,7 @@ CSSでレイアウトを指定する際に使用する。
 * invisible, hide, hidden（隠す、非表示にする）
 * open, opened（開く）
 * close, closed（閉じる）
-* alert, error, warning, danger（警告、エラー）
+* alert, error, caution, warning, danger（警告、エラー）
 * success
 * information, info 
 
@@ -114,6 +125,7 @@ CSSでレイアウトを指定する際に使用する。
 * breadcrumb（パンくずリスト）
 * search
 * pagenation, pager
+* backtop（トップへ戻る）
 * progress, progressbar
 * label
 * badge
@@ -128,6 +140,7 @@ CSSでレイアウトを指定する際に使用する。
 * thumbnail（画像を一覧表示するために縮小して表示させたもの）
 * avatar（ユーザーやゲストを識別するための画像）
 * feature（対応する文章の特徴を補足するための画像やイラスト）
+* gallery
 * overlay（要素の上の階層に覆いかぶさる）
 * AdSense, ad, banner, pr（Googleのアドセンスや広告）
 * icon
@@ -143,9 +156,14 @@ CSSでレイアウトを指定する際に使用する。
 * news, event, topic, pickup
 * history
 * concept
+* toc, index（目次）
 * comment
 * contact, inquiry（お問い合わせ）
 * access
-* date
+* map
+* sns, social
+* date, time, published
 * category
 * tag
+* address
+* tel, phone
