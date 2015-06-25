@@ -22,10 +22,8 @@ HTML5におけるsection, article, nav要素のようにアウトラインを形
 ### セクションに関連する要素
 * heading, headline, title
 * logo
-* description(概要、説明、解説)
-* hero, visual, jumbotron, cover（ファーストビューに配置する大きめの画像）
 * copyright, small
-* form
+
 
 ## レイアウト
 CSSでレイアウトを指定する際に使用する。
@@ -41,6 +39,7 @@ CSSでレイアウトを指定する際に使用する。
 * media（画像と文章が横並びになったもの）
 * card（画像と文章が縦並びになったもの）
 * tile, panel（複数の同じ形状のブロックを並べたもの）
+* form
 
 ### エレメント
 * item, cell（ブロックに内包される汎用的な名前）
@@ -49,6 +48,7 @@ CSSでレイアウトを指定する際に使用する。
 * caption（図表を補足する）
 * summary（概要、要約）
 * note（注釈、注意）
+* description(概要、説明、解説)
 * lead（見出しの補足や記事の要約）
 
 ### モディファイア
@@ -124,6 +124,7 @@ CSSでレイアウトを指定する際に使用する。
 ## 画像
 
 * image, img, photo
+* hero, visual, jumbotron, cover（ファーストビューに配置する大きめの画像）
 * thumbnail（画像を一覧表示するために縮小して表示させたもの）
 * avatar（ユーザーやゲストを識別するための画像）
 * feature（対応する文章の特徴を補足するための画像やイラスト）
