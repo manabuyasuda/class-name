@@ -1,16 +1,16 @@
-# CSSのクラス名に使える単語
+# CSSのクラス名に使われる単語一覧
 OOCSS、SMACSS、BEM、FLOCSSなどCSS設計のためのガイドラインはいくつも出ていますが、実際にコーディングする時に迷ってしまうのがどのようなクラス名を使用するのかということ。
 
-CSS設計において正解はありません。どのガイドラインを参考にしてもいいですが**一度決めたルールを守り続けること**を破ってしまうと、どんなに優れたガイドラインを定めても意味がありません。
+同じような意味の`.wrapper`と`.container`のどちらを使うのか、`.button`と`.btn`のように省略は許容するのか。コードを書く人によってばらつきが出たり、感覚的に書いていると区別もなく両方使ってしまったりします。
 
-`.wrapper`なのか`.container`なのか、`.button`なのか`.btn`なのか。同じ意味でも単語が違ったり、省略するのかそうでないのかなど制作会社や個人個人によって違いが出ます。
-
-ここでは推奨する単語を定めてはいません。色々な単語を集めて分類することで比較し、ルールを明確に定義するためのツールとして作成をしています。
+ここでは推奨する単語を定めてはいません。色々な単語を集めて分類・比較し、ルールを明確に定義するためのツールとして作成をしています。
 
 ## アウトライン
-HTML5におけるsection, article, nav要素のようにアウトラインを形成するセクションとそれに付随する要素。
+HTML5におけるsection, article, nav要素のようにアウトラインを形成するセクションとそれに付随する要素です。
 
 ### セクション
+単一の単語ではなく`.l-header`や`.mainNavigation`のようにプレフィックスを付与することで一意で明確な意図を示すこともできます。
+
 * section
 * article, main, entry, entries, content, contents, site
 * aside, side, sidebar, secondary, second
@@ -23,16 +23,21 @@ HTML5におけるsection, article, nav要素のようにアウトラインを形
 
 ### セクションに関連する要素
 * heading, headline, title
-* logo
-* copyright, small
+* lead（見出しの補足や記事の要約）
+* logo（サイトロゴ）
+* copyright, small（コピーライト）
+* widget
+* popular, ranking（人気記事、ランキング）
+* privacy（プライバシーポリシー）
+* sitemap（サイトマップ）
 
 
 ## レイアウト
-CSSでレイアウトを指定する際に使用する。
+CSSでレイアウトを指定する際に使用します。BEMとSMACSSの分類方法を使用しています。セクションと同じくプレフィックスを付与してバリエーションを作ります。
 
 ### ブロック
-* wrapper, wrap, container, outer, area（要素のかたまりを物理的にまとめるために使用される）
-* inner, body, box, unit, holder, frame（wrapperやcontainerなどに入れ子にして配置するコンテナブロック）
+* wrapper, wrap, container, outer, area（要素のかたまりを物理的にまとめるために使用される大枠のコンテナブロック）
+* inner, body, box, unit, holder, frame, region（wrapperやcontainerなどに入れ子にして配置するコンテナブロック）
 * list, items（ul要素やol要素のような箇条書きや一覧）
 * group, collection（同じ分類の要素をまとめる）
 * grid（グリッドレイアウトを使用する時にルートになる）
@@ -43,26 +48,28 @@ CSSでレイアウトを指定する際に使用する。
 * tile, panel（複数の同じ形状のブロックを並べたもの）
 * form
 * video, player（動画）
-* mask（透過したカラー）
+* mask, overlay, blur（要素の上の階層に覆いかぶさって見た目を変化させる）
 
 
 ### エレメント
 * item, cell（ブロックに内包される汎用的な名前）
 * link
-* tagline（スローガン、キャッチコピー）
-* catch（キャッチコピー）
+* tagline, slogan（スローガン、キャッチコピー）
+* catch, copy（キャッチコピー）
 * text, message, sentence（文章）
 * caption（図表を補足する）
 * summary（概要、要約）
 * note（注釈、注意）
-* description, desc(概要、説明、解説)
-* lead（見出しの補足や記事の要約）
+* description, desc（概要、説明、解説）
+* introduction（紹介する、前置き、解説）
 * announce（告知、お知らせ）
+* information, info 
 * meta（メタ情報）
 * target
+* previous, next
 
 ### モディファイア
-エレメントやコンポーネントのバージョン違い。恒久的で状態が変化しない。
+エレメントやコンポーネントのバージョン違い。恒久的で状態が変化しません。汎用クラスにも使用できます。
 
 * push
 * pull
@@ -72,13 +79,15 @@ CSSでレイアウトを指定する際に使用する。
 * left
 * right
 * center
+* top
+* middle
+* bottom
 * huge, large
 * medium, normal
 * small, tiny
 * author
 * guest, user
-* previous, next
-* sp, tb, pc（スマホ、タブレット、パソコン）
+* sp, mobile, tb, pc（スマホ、タブレット、パソコン）
 
 ### ステート
 モディファイアと違いユーザーの操作などで状態が変化する。
@@ -90,14 +99,16 @@ CSSでレイアウトを指定する際に使用する。
 * open, opened（開く）
 * close, closed（閉じる）
 * alert, error, caution, warning, danger（警告、エラー）
-* success
-* information, info 
+* success（成功）
+
 
 ## プレフィックス
 クラス名の重複を避けたり意図を明確にするため、ブロックやコンポーネントにプレフィックス（接頭辞）を付与する。
 
 * site, common（共通の）
 * global, main（主要な）
+* sub（補助的な）
+* general（一般的な、全体的な）
 * top（トップページの）
 * local
 * brand（サイトを象徴するカラーやフォント）
@@ -116,7 +127,7 @@ CSSでレイアウトを指定する際に使用する。
 * tab, tabs
 * toggle（同じ操作で状態を切り替えられる）
 * dropdown（複数の値から選択できるリスト）
-* modal, daialog（確認や警告のため、基本的に自動で表示され、消すまでは元の画面に戻れない）
+* modal, daialog（確認や警告のため表示される）
 * lightbox
 * carousel, slider（コンテンツを水平・垂直にスライド表示させる）
 * accordion（タイトルとそれに対応したコンテンツを表示させる）
@@ -134,6 +145,7 @@ CSSでレイアウトを指定する際に使用する。
 
 
 ## 画像
+主に画像の形式で使用される要素。
 
 * image, img, photo
 * hero, visual, jumbotron, cover（ファーストビューに配置する大きめの画像）
@@ -141,29 +153,29 @@ CSSでレイアウトを指定する際に使用する。
 * avatar（ユーザーやゲストを識別するための画像）
 * feature（対応する文章の特徴を補足するための画像やイラスト）
 * gallery
-* overlay（要素の上の階層に覆いかぶさる）
-* AdSense, ad, banner, pr（Googleのアドセンスや広告）
+* AdSense, ad, sponsor, advertise, banner, pr（Google Adsenseや広告）
 * icon
 
 
 ## コンテンツ
-コンテンツ部分で使用する。
+コンテンツ部分で使用する要素。
 
 * about
 * staff, member
 * menu, shop, online
 * work, works, product
 * news, event, topic, pickup
-* history
+* history, archive
 * concept
+* recommend
 * toc, index（目次）
 * comment
 * contact, inquiry（お問い合わせ）
 * access
 * map
-* sns, social
+* sns, social, share（ソーシャルボタン）
 * date, time, published
-* category
+* category, categories, cat
 * tag
 * address
 * tel, phone
